@@ -139,6 +139,88 @@ Lemlist, Notion, Qonto, Indy — ces quatre seuls peuvent financer le palier 1.
 
 ---
 
+## Courbe de revenus réelle — les 12 premiers mois
+
+Pas zéro pendant 6 mois. Mais peu.
+
+| Période | Revenus mensuels | Source principale |
+|---|---|---|
+| M1–M2 | 0–50€ | Quelques clics affiliés |
+| M3–M4 | 50–300€ | Affiliation + Beehiiv Boosts |
+| M5–M6 | 300–800€ | Premier sponsor direct ou produit digital simple |
+| M7–M9 | 800–2 000€ | Sponsoring régulier + affiliation établie |
+| M10–M12 | 2 000–5 000€ | Formation + sponsors |
+
+**La question n'est pas "est-ce que je gagne de l'argent à M3" mais "est-ce que la courbe monte ?"**
+
+### Accélérer la première rentrée — produit simple à M2
+
+Pas une formation — un template Notion ou pack de prompts à 19–29€.
+C'est le contenu produit de toute façon, packagé.
+
+> *"Les 12 prompts que j'utilise pour tester un outil en 30 minutes"* → 29€
+> 20 ventes = 580€. Dès M2.
+
+---
+
+## Beehiiv Boosts
+
+Marketplace interne à Beehiiv. D'autres newsletters paient pour être recommandées à tes abonnés.
+
+**Fonctionnement :**
+À la fin de ton email, un bloc de recommandation :
+> *"Cette newsletter vaut le coup : [The Rundown AI] — s'abonner"*
+
+Quand un abonné clique et s'inscrit → tu reçois 1–3€ automatiquement.
+
+Tu choisis quelles newsletters recommander (tu acceptes ou refuses les offres).
+Passif, natif dans Beehiiv, zéro démarche commerciale.
+
+---
+
+## Lien affilié — règle éditoriale
+
+**Tu dois avoir testé l'outil.**
+
+Pas une règle morale — une règle de positionnement.
+@brief.ia = "je teste, je donne un verdict". Un lien affilié sur un outil non testé
+contredit directement la ligne éditoriale du Post 1.
+
+```
+Outil testé + verdict publié + lien affilié  → crédible, cohérent
+Outil non testé + lien affilié               → contradictoire
+```
+
+**Seule exception :** les outils de ta stack quotidienne.
+Tu les utilises déjà — pas besoin de protocole formel, tu as l'expérience réelle.
+
+C'est aussi ce qui justifie le tarif premium des sponsors : ils paient pour
+une recommandation qui a du poids, pas un banner ad.
+
+---
+
+## La question en fin de newsletter — pourquoi ça marche
+
+Une question simple à chaque édition (ex: *"Tu vas tester cet outil ? Oui / Non / Déjà utilisé"*) remplit 3 fonctions :
+
+**1. Délivrabilité**
+Un abonné qui répond interagit avec ton email → Gmail classe tes prochains
+emails en "important" plutôt qu'en promotions. Une réponse = meilleure
+délivrabilité pour toute la liste.
+
+**2. Données first-party sans formulaire**
+3 clics → tu sais ce que veut ta liste. Segmentation comportementale —
+plus puissante que la segmentation déclarative à l'inscription.
+
+**3. Preuve d'engagement pour les sponsors**
+> *"42% de mes abonnés répondent à la question hebdomadaire"*
+
+Preuve que 99% des newsletters ne peuvent pas produire. Justifie le tarif premium.
+
+**Bonus :** les réponses génèrent du contenu — *"67% d'entre vous ont dit non — voici pourquoi c'est le bon réflexe"*.
+
+---
+
 ## Règle absolue
 
 La newsletter génère les revenus. Instagram génère les abonnés newsletter.
