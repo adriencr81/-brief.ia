@@ -95,6 +95,30 @@ J6  → Story CTA newsletter Substack
 
 ---
 
+## Post #5 — Product Research : "Qu'est-ce que vous voulez automatiser ?"
+
+**Pilier :** Communauté / Engagement
+**Format :** Post image simple + Stories interactives (sondage + question ouverte)
+**Objectif caché :** Identifier le workflow N8N à builder pour le futur produit SaaS
+**Timing :** Après les 4 posts de lancement, une fois une première audience en place
+
+**Contenu du post :**
+- Accroche : "Je prépare quelque chose. Mais avant, j'ai besoin de vous."
+- Corps : "Quelle tâche répétitive vous fait perdre le plus de temps chaque semaine ?" + exemples (veille, prospection, contenu, emails)
+- CTA : répondre en commentaire ou en DM
+
+**Stories associées :**
+- Sondage : "Vous automatisez déjà des tâches ?" (Oui / Non / J'essaie)
+- Question ouverte : "La tâche que vous rêveriez de ne plus jamais faire ?"
+- Question ouverte : "Vous payeriez pour qu'un outil le fasse à votre place ?"
+
+**Ce que tu fais avec les réponses :**
+- Note les réponses les plus fréquentes → c'est ton brief produit
+- Les 3 douleurs les plus citées = candidats pour le workflow SaaS
+- Réponds à chaque DM → début de la relation client
+
+---
+
 ## Outils à créer avant post #1
 
 - [ ] Compte Substack en ligne (même vide)
