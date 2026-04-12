@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "instagram-research": {
+      "source": "bradautomates/head-of-content",
+      "sourceType": "github",
+      "computedHash": "0130307ff27ab236b465e43a61ea57b2398ac3158f810446f602de61284e71d5"
+    }
+  }
+}

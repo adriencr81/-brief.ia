@@ -1,0 +1,47 @@
+[
+  {
+    "url": "https://www.instagram.com/theaisolopreneur/",
+    "inputUrl": "https://www.instagram.com/theaisolopreneur/",
+    "requestErrorMessages": [],
+    "error": "no_items",
+    "errorDescription": "Empty or private data for provided input"
+  },
+  {
+    "url": "https://www.instagram.com/thegeneralai/",
+    "inputUrl": "https://www.instagram.com/thegeneralai/",
+    "requestErrorMessages": [],
+    "error": "no_items",
+    "errorDescription": "Empty or private data for provided input"
+  },
+  {
+    "url": "https://www.instagram.com/levelsio/",
+    "inputUrl": "https://www.instagram.com/levelsio/",
+    "requestErrorMessages": [],
+    "error": "no_items",
+    "errorDescription": "Empty or private data for provided input"
+  },
+  {
+    "url": "https://www.instagram.com/lenny.ai.fr/",
+    "username": "lenny.ai.fr",
+    "error": "not_found",
+    "errorDescription": "Post does not exist"
+  },
+  {
+    "url": "https://www.instagram.com/ai.breakdown/",
+    "username": "ai.breakdown",
+    "error": "not_found",
+    "errorDescription": "Post does not exist"
+  },
+  {
+    "url": "https://www.instagram.com/codeur_du_dimanche/",
+    "username": "codeur_du_dimanche",
+    "error": "not_found",
+    "errorDescription": "Post does not exist"
+  },
+  {
+    "url": "https://www.instagram.com/mattshumer_/",
+    "username": "mattshumer_",
+    "error": "not_found",
+    "errorDescription": "Post does not exist"
+  }
+]
