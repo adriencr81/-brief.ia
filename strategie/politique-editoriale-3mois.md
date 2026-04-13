@@ -17,20 +17,20 @@ Pas d'actif unique. Chaque sujet — test d'outil ou news — génère au minimu
 
 ## Les deux flux de contenu
 
-### Flux 1 — TEST & VERDICT (50% du contenu)
-Source : tests réels d'outils IA
+### Flux 1 — NEWS IA / SIGNAL vs BRUIT (50% du contenu)
+Source : newsletters hebdomadaires (PDF dans `newsletter/`)
 
 Règle de publication :
-- Tu ne publies que si tu as un avis tranché après test
-- Si c'est tiède, tu ne publies pas
+- Tu ne publies que si le score ≥ 7/10
+- Signal > bruit : info qui change quelque chose pour les builders
 
-**1 test = 4 actifs :**
+**2–3 news/semaine = 4–6 actifs :**
 | Actif | Format | Publication |
 |-------|--------|-------------|
-| Carrousel TEST & VERDICT (7 slides) | 1080×1080 Canva | Mardi ou jeudi 7h–9h |
-| Reel TEST & VERDICT (30–35s) | CapCut vertical | Mercredi ou vendredi 18h |
-| Story "En train de tester" | 1–3 stories | J-2 avant le carrousel |
-| DM rapport | Texte + visuels | Envoi auto via ManyChat après CTA |
+| Carrousel NEWS (5 slides) | 1080×1080 Canva | Mardi + mercredi 7h–9h |
+| Reel NEWS (15–20s) | CapCut fond noir | Mercredi + vendredi 18h |
+| Story "Breaking: ..." | 1–2 stories | Jour de la news |
+| DM ressource | Texte + liste outils | Envoi auto via ManyChat après CTA |
 
 **Structure du carrousel TEST (7 slides) :**
 1. Hook — verdict tranchée dès slide 1
@@ -53,79 +53,94 @@ Règle de publication :
 
 ---
 
-### Flux 2 — SIGNAL vs BRUIT (30% du contenu)
-Source : newsletters hebdomadaires (PDF dans `newsletter/`)
+### Flux 2 — TEST & VERDICT (50% du contenu)
+Source : 1 outil testé par semaine (Paperclip, Cursor, Make, n8n, etc.)
 
-Workflow chaque semaine (lundi matin, 30 min) :
-1. Lire les PDFs avec le skill `newsletter-to-instagram`
-2. Scorer chaque info (seuil : ≥ 7/10)
-3. Sélectionner 1 top pick par semaine
+Règle de publication :
+- Tu ne publies que si tu as un avis tranché après test
+- Si c'est tiède, tu ne publies pas
+- 1 test = 1 semaine, publié le même cycle
 
-**1 news = 2 actifs :**
+**1 test = 3 actifs :**
 | Actif | Format | Publication |
 |-------|--------|-------------|
-| Carrousel NEWS (5 slides) | 1080×1080 Canva | Mercredi 7h–9h |
-| Reel NEWS + VERDICT (15–20s) | CapCut fond noir | Vendredi 18h |
+| Carrousel TEST & VERDICT (5–7 slides) | 1080×1080 Canva | Jeudi 7h–9h |
+| Reel TEST (30–35s) | CapCut vertical | Vendredi 18h |
+| Post image simple | 1080×1350 | Samedi 10h |
 
-**Structure du carrousel NEWS (5 slides) :**
-1. Hook — fait choc + "OpenAI n'a pas fait ça" / "personne n'en parle"
-2. Les faits — bruts, sourcés
-3. Ce que ça révèle vraiment — le signal sous le bruit
-4. Ce que ça change pour toi — actionnable
-5. CTA — "Commente [MOT] pour recevoir [liste/guide]"
+**Workflow test :**
+1. Lundi matin : choix de l'outil à tester
+2. Mardi–jeudi : test réel (45 min) + notes
+3. Jeudi : créer carrousel + caption
+4. Vendredi : créer reel
+5. Samedi : créer post simple
 
-**Structure du reel NEWS (15–20s) :**
+**Structure du carrousel TEST (5–7 slides) :**
+1. Hook — verdict tranchée dès slide 1
+2. Promesse de l'outil — ce qu'il promet
+3. Test réel — ce que t'as fait exactement
+4. Ce qui marche — résultat concret, chiffré
+5. Ce qui marche pas — limite honnête
+6. Score /10 + pour qui c'est fait
+7. (optionnel) CTA — "Commente [MOT] pour recevoir [rapport]"
+
+**Structure du reel TEST (30–35s) :**
 ```
-[0–3s]   FAIT — l'actu brute (1 phrase)
-[3–6s]   IMPLICATION — "Et ça révèle [conséquence inattendue]."
-[6–10s]  "Voilà ce que ça signifie vraiment."
-[10–14s] 2–3 conséquences concrètes (bullets)
-[14–17s] VERDICT brief.ia — 1 phrase tranchée
-[17–20s] CTA — "Commente [MOT] → ressource"
+[0–4s]   Verdict brutal : "X/10. Voici pourquoi."
+[4–10s]  Ce que l'outil promet
+[10–18s] Ce que j'ai vraiment trouvé (3 bullets)
+[18–25s] La limite que personne dit
+[25–30s] Pour qui c'est fait (1 phrase)
+[30–35s] CTA : "Commente [MOT] → rapport complet"
 ```
 
 ---
 
-### Flux 3 — COULISSES (20% du contenu)
+### Flux 3 — COULISSES (optionnel)
 Source : ta propre expérience de builder avec l'IA
 
 Format : Stories uniquement (gratuit, 0 production time)
 - "Je suis en train de tester [outil]" — teaser avant test
-- "Mon stack cette semaine" — screenshot rapide
-- "Résultat inattendu" — moment de vérité live
-- Sondages : "Tu utilises ça ?" / "Tu veux que je teste ça ?"
+- "Breaking: [news IA]" — réaction live aux newsletters
+- "Sondage : tu utilises ça ?" — engagement
 
 Règle : 1 story/jour minimum. 2 min max à produire.
 
 ---
 
-## Rythme de publication hebdomadaire
+## Rythme de publication hebdomadaire (7 posts)
 
-| Jour | Heure | Contenu | Format |
-|------|-------|---------|--------|
-| Lundi | matin | Lecture newsletters + sélection news | (production) |
-| Mardi | 7h–9h | Carrousel TEST & VERDICT | Post |
-| Mercredi | 7h–9h | Carrousel NEWS (si semaine news) | Post |
-| Mercredi | 18h | Reel TEST & VERDICT | Reel |
-| Jeudi | — | Stories coulisses | Stories |
-| Vendredi | 18h | Reel NEWS + VERDICT | Reel |
-| Samedi | — | Stories retour communauté | Stories |
+| Jour | Heure | Contenu | Format | Flux |
+|------|-------|---------|--------|------|
+| **Lundi** | matin | Lecture newsletters + sélection news (30 min) | (production) | NEWS |
+| **Mardi** | 7h–9h | Carrousel NEWS #1 (scoring élevé) | Post | NEWS |
+| **Mercredi** | 7h–9h | Carrousel NEWS #2 (second sujet) | Post | NEWS |
+| **Mercredi** | 18h | Reel NEWS #1 | Reel | NEWS |
+| **Jeudi** | 7h–9h | Carrousel TEST & VERDICT (outil semaine) | Post | TEST |
+| **Vendredi** | 18h | Reel TEST ou Reel NEWS #2 | Reel | TEST/NEWS |
+| **Samedi** | 10h | Post image simple (coulisses ou news) | Post | COULISSES |
+| **Quotidien** | var | Stories (teasing, breaking, sondages) | Stories | COULISSES |
 
-**Volume cible : 3–4 posts/semaine + stories quotidiennes**
+**Volume : 7 posts/semaine + stories quotidiennes = priorité MAXIMAL sur l'algorithme**
 
 ---
 
-## Planning de production hebdomadaire (5–6h)
+## Planning de production hebdomadaire (6–7h)
 
 | Tâche | Durée | Quand |
 |-------|-------|-------|
-| Lecture newsletters + scoring | 30 min | Lundi matin |
-| Test réel d'un outil | 45 min | Variable (dans la semaine) |
-| Création carrousel (Canva) | 60 min | La veille de publication |
-| Caption + hashtags | 20 min | La veille |
-| Reel (CapCut) | 45 min | La veille |
-| Stories | 10 min/jour | Quotidien |
-| DM lead magnet | 15 min | Après chaque nouveau CTA |
+| Lecture newsletters + scoring news | 30 min | **Lundi matin** |
+| Création carrousel NEWS #1 (Canva) | 45 min | **Lundi soir** |
+| Création carrousel NEWS #2 (Canva) | 45 min | **Mardi soir** |
+| Test réel d'un outil | 45 min | **Mardi–jeudi** |
+| Création carrousel TEST (Canva) | 60 min | **Jeudi matin** |
+| Reel NEWS (CapCut) | 45 min | **Mercredi soir** |
+| Reel TEST (CapCut) | 45 min | **Vendredi matin** |
+| Post image simple (Canva) | 30 min | **Samedi matin** |
+| Stories | 10 min/jour | **Quotidien** |
+| DM lead magnet (si nouveau CTA) | 15 min | **À la demande** |
+
+**Total : ~6–7h/semaine (vs 5–6h théorique) — compensé par forte visibilité algorithme**
 
 ---
 
@@ -142,72 +157,71 @@ Règle : 1 story/jour minimum. 2 min max à produire.
 
 ## Mois 1 — Avril / Mai : Fondations (semaines 1–4)
 
-**Objectif** : 50 abonnés newsletter, établir la voix, tester les formats
+**Objectif** : 50+ abonnés newsletter, établir la voix, **50 posts longs d'ici fin avril**
 
-**Outils à tester (pipeline) :**
-1. NotebookLM — context engineering business (checklist prête dans `contenu/carrousel-notebooklm-test.md`)
-2. Perplexity Pro — remplacement de la recherche Google pour fondateurs
-3. Claude Projects — comment structurer un projet IA pour son business
-4. Make.com ou n8n — première automatisation concrète
+**Outils à tester (1 par semaine) :**
+- **Semaine 1 (13–17 avril)** : Paperclip — pipeline de veille IA + agents
+- **Semaine 2** : À choisir selon tes vrais besoins (pas de liste imposée)
+- **Semaine 3–4** : Outils concrets que tu utilises réellement
 
-**News à couvrir :**
-- Traitement hebdomadaire des PDFs newsletters (1 news/semaine minimum)
-- Priorité aux annonces majeures (nouveaux modèles, pivots d'entreprises IA)
+**News IA à couvrir (2–3 par semaine) :**
+- Traitement PDFs newsletters chaque lundi (skill `newsletter-to-instagram`)
+- Priorité : annonces majeures, changements stratégiques, pivots
+- Scorer ≥ 7/10 pour publier
 
-**Focus format :** Maîtriser le carrousel 5 slides. Ne pas encore s'éparpiller sur les reels si le temps manque — mieux vaut 1 carrousel parfait qu'un reel approximatif.
+**Focus production :** 
+- 7 posts/semaine = rhythm maximal pour algorithme
+- 2–3 carrousels news + 1 carrousel test + 1–2 reels + 1 post simple + stories quotidiens
+- Qualité > quantité, mais volume > régularité (l'algo récompense la consistency)
 
-**Semaine 1 check-list de lancement :**
-- [ ] Publier le carrousel Context Engineering (déjà créé)
-- [ ] Configurer ManyChat trigger GUIDE
-- [ ] Configurer ManyChat trigger SIGNAL (post Anthropic)
-- [ ] Tester NotebookLM (30 min — checklist existante)
-- [ ] Publier carrousel NotebookLM avec verdict réel
+**Semaine 1 check-list (13–17 avril) :**
+- [x] ManyChat configuré (déjà fait)
+- [ ] Publier carrousel Context Engineering (GUIDE trigger)
+- [ ] Publier carrousel Anthropic Blocks Claude (SIGNAL trigger)
+- [ ] Publier reel Anthropic NEWS
+- [ ] Tester Paperclip (45 min)
+- [ ] Publier carrousel TEST Paperclip (jeudi)
+- [ ] Publier reel TEST Paperclip (vendredi)
 
 ---
 
 ## Mois 2 — Mai / Juin : Accélération (semaines 5–8)
 
-**Objectif** : 100 abonnés newsletter, première collaboration ou mention
+**Objectif** : 150+ abonnés newsletter, identifier ce qui convertit vraiment
 
-**Outils à tester :**
-5. Cursor / Windsurf — pour founders qui codent pas
-6. Descript — montage vidéo IA pour créateurs
-7. Notion AI — vraiment utile ou pas ?
-8. ElevenLabs — cas usage concret pour freelances
+**Outils à tester (1 par semaine) :**
+- Semaine 5–8 : 4 outils de ton choix selon tes vrais besoins ou trending news
 
-**News à couvrir :**
-- Maintenir 1 news/semaine depuis newsletters
-- Introduire la série "Stack du moment" (1 post/mois : mes 5 outils actuels)
+**News IA à couvrir :**
+- Maintenir 2–3 news/semaine depuis newsletters
+- Priorité aux pivots stratégiques (Anthropic, OpenAI, Google, etc.)
 
-**Nouveau format à ajouter : Stack du moment (1×/mois)**
-- Carrousel 5 slides : "Mon stack IA du mois de [mois]"
-- Slide 1 : liste des 5 outils + score /10
-- Slides 2–4 : 1 outil par slide, usage réel + verdict
-- Slide 5 : CTA "Commente STACK pour recevoir le guide complet"
+**Analyse ce qui performe :**
+- Tracker les 3 posts NEWS qui génèrent le + de commentaires/DMs
+- Tracker les 3 posts TEST qui convertissent le + en abonnés
+- Doubler sur les angles gagnants
 
-**Objectif reel :** Publier au moins 1 reel/semaine en parallèle des carrousels. Analyser les vues pour identifier ce qui performe.
+**Focus :** Passer de 50 à 150 abonnés newsletter via consistency seule (7 posts/semaine).
 
 ---
 
 ## Mois 3 — Juin / Juillet : Consolidation (semaines 9–12)
 
-**Objectif** : 200 abonnés newsletter, comprendre ce qui convertit
+**Objectif** : 200+ abonnés newsletter, préparer monétisation
 
 **Outils à tester :**
-9. ChatGPT Projects vs Claude Projects — comparatif direct
-10. Relevance AI — agents sans code
-11. Voiceflow — chatbot IA pour freelances
-12. Outil de ton choix selon les sondages stories
+- Semaine 9–12 : Continuer 1 outil/semaine (meilleure couverture)
 
-**Focus analyse :**
-- Identifier les 3 posts qui ont généré le plus d'abonnés newsletter
-- Doubler sur ces formats et angles
-- Éliminer ce qui ne convertit pas en abonnés (même si ça a des likes)
+**Focus analyse + optimisation :**
+- Identifier les 3 angles de NEWS qui convertissent le mieux
+- Identifier les 3 types d'outils TEST qui intéressent ton audience
+- Éliminer/réduire ce qui ne convertit pas (même si viral)
+- Commencer à préparer sponsorings SaaS (contact 5–10 éditeurs à partir de 200 subs)
 
-**Post de bilan mensuel (1×/mois, format Stories) :**
-- Outil le mieux noté du mois
+**Post de bilan mensuel (format Story ou post image) :**
+- Meilleur post du mois (quel sujet ? quel format ?)
 - Nombre d'abonnés gagnés
-- Ce que j'ai appris (1 insight inattendu)
+- 1 insight sur ce que tu veux tester le mois prochain
 
 ---
 
@@ -230,11 +244,13 @@ Métriques secondaires (pour ajuster le contenu) :
 
 ## Ce qu'on ne fait PAS
 
-- Poster du contenu sans avis tranché
-- Publier sans lead magnet DM configuré
-- Créer plus de 1 format nouveau par mois (pas d'expérimentation permanente)
+- Poster du contenu NEWS sans score ≥ 7/10
+- Poster un TEST sans verdict tranché après test réel
+- Laisser tomber un jour de publication (la consistency > la qualité relative)
+- Tester plus d'1 outil par semaine (rythme insoutenable)
 - Changer de positionnement en fonction des likes
-- Comparer aux comptes qui ont 100k abonnés — la référence c'est M3 = 200 subs newsletter
+- Comparer aux comptes 100K+ (cible: 200 subs newsletter M3, puis 5K+ à M12)
+- Créer de nouveaux formats avant d'avoir maîtrisé carrousels + reels
 
 ---
 
