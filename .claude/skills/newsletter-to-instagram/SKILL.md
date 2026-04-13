@@ -82,11 +82,14 @@ Explain the choice: why this info, why today, what angle.
 
 For the selected item, generate a complete post package:
 
-#### A. FORMAT CHOICE
-Choose the best format based on content type:
-- **Carrousel** (3–7 slides): for explanations, comparisons, lists, tutorials
-- **Single image**: for choc stats, quotes, simple announcements
-- **Reel script**: for storytelling, demos, reactions
+#### A. FORMATS — Always generate BOTH
+
+For every selected item, generate two formats:
+
+1. **Carrousel** (5 slides) — publié mardi ou jeudi 7h–9h
+2. **Reel NEWS + VERDICT** (15–20 sec) — publié mercredi ou jeudi 18h, 2 jours après le carrousel
+
+Exception: if content is purely a choc stat or quote, replace the carrousel with a **single image** — but still generate the reel.
 
 #### B. SLIDE-BY-SLIDE CONTENT (for carrousel)
 
@@ -134,6 +137,25 @@ Rules:
 - No corporate language — direct, informed, slightly provocative
 - Hook must work as standalone (first 2 lines visible before "voir plus")
 - CTA must use a single French word (GUIDE, LIEN, LISTE, OUTIL, etc.)
+
+#### C2. REEL SCRIPT — NEWS + VERDICT (15–20 sec)
+
+Format: texte animé, fond noir, phrases une par une. Pas de voix. Pas de visage.
+
+```
+[0–3s]   FAIT — l'actu brute (1 phrase max)
+[3–6s]   IMPLICATION — "Et ça révèle [conséquence inattendue]."
+[6–10s]  "Voilà ce que ça signifie vraiment."
+[10–14s] 2–3 conséquences concrètes (bullets rapides)
+[14–17s] VERDICT brief.ia — 1 phrase tranchée
+[17–20s] CTA — "Commente [MOT] → [ressource]"
+```
+
+CapCut specs:
+- Fond #000000, texte blanc Inter Bold centré
+- Mots-clés en cyan #00C8FF
+- Transition : fade entre chaque phrase
+- Musique : lo-fi électronique sombre, ~18s
 
 #### D. CANVA SPECS
 
