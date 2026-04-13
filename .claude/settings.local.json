@@ -49,7 +49,10 @@
       "Bash(timeout 20 npx --prefer-offline -y antibanana-mcp)",
       "Bash(chmod +x /tmp/replicate_test2.sh)",
       "Bash(/tmp/replicate_test2.sh)",
-      "Bash(python3 /tmp/generate_image.py)"
+      "Bash(python3 /tmp/generate_image.py)",
+      "Bash(python3)",
+      "WebFetch(domain:kie.ai)",
+      "WebFetch(domain:docs.kie.ai)"
     ]
   }
 }
