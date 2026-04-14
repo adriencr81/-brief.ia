@@ -154,7 +154,7 @@ def submit_generation_task(
     slide_num: int = 1,
     context: str = "",
     aspect_ratio: str = "1:1",
-    resolution: str = "1K",
+    resolution: str = "2K",
     style: str = "default",
     reference_image_url: str = None
 ) -> dict:

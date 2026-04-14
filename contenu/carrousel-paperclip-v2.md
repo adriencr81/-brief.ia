@@ -144,12 +144,12 @@
 > ✅ Pour toi si : tu veux orchestrer des agents en local
 > ❌ Pas pour toi si : tu cherches un outil clé en main
 >
-> **Score : 2,5 / 5**
+> **Score : 3 / 5**
 >
 > 💬 Commente **RAPPORT**
 > et je t'envoie le test complet en DM.
 
-**Note Canva :** "2,5 / 5" en très grand (60–70pt). "RAPPORT" en cyan bold. CTA en bas, bien visible.
+**Note Canva :** "3 / 5" en très grand (60–70pt). "RAPPORT" en cyan bold. CTA en bas, bien visible.
 
 ---
 
@@ -175,7 +175,7 @@
 - [ ] 7 slides créées sur Canva (template TEST & VERDICT)
 - [ ] Badge "TEST & VERDICT" visible slide 1
 - [ ] Zone "blocked" encadrée rouge sur slide 4
-- [ ] "2,5 / 5" en grand sur slide 7
+- [ ] "3 / 5" en grand sur slide 7
 - [ ] "RAPPORT" en cyan sur slide 7
 - [ ] Caption copiée avec CTA "Commente RAPPORT"
 - [ ] Story J0 déjà postée ✅

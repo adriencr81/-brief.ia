@@ -5,7 +5,7 @@
 set -e
 
 TOPIC=${1:-"test"}
-STYLE=${2:-"default"}
+STYLE=${2:-"default"}  # Changed from "impact" to "default" (less sensational)
 REF_IMG=${3:-""}
 
 SLIDES_FILE="../contenu/carousel-${TOPIC}.md"
@@ -27,13 +27,31 @@ echo "[PARSE] Reading slides from contenu/carousel-*.md..."
 
 # Slide 1 - Hook
 echo "[STEP 1] Generating slide 1 (hook)..."
-TASK=$(python3 generate_image.py 1 "Le prompt engineering" "est mort." "" --style "$STYLE" $([[ ! -z "$REF_IMG" ]] && echo "--ref $REF_IMG") 2>&1 | grep -o '"task_id": "[^"]*"' | cut -d'"' -f4)
+TASK=$(python3 generate_image.py 1 "Anthropic bloque" "Claude hors de portée" "" --style "$STYLE" $([[ ! -z "$REF_IMG" ]] && echo "--ref $REF_IMG") 2>&1 | grep -o '"task_id": "[^"]*"' | cut -d'"' -f4)
 TASKS+=($TASK)
 echo "  → Task ID: $TASK"
 
 # Slide 2 - Context
 echo "[STEP 2] Generating slide 2 (context)..."
-TASK=$(python3 generate_image.py 2 "Voici ce qui le remplace" "En 2026..." "" --style "$STYLE" 2>&1 | grep -o '"task_id": "[^"]*"' | cut -d'"' -f4)
+TASK=$(python3 generate_image.py 2 "Fini les agents tiers" "Seule l'API reste" "" --style "$STYLE" 2>&1 | grep -o '"task_id": "[^"]*"' | cut -d'"' -f4)
+TASKS+=($TASK)
+echo "  → Task ID: $TASK"
+
+# Slide 3 - Comparison
+echo "[STEP 3] Generating slide 3 (comparison)..."
+TASK=$(python3 generate_image.py 3 "OpenAI vs Anthropic" "Open vs Fermé" "" --style "$STYLE" 2>&1 | grep -o '"task_id": "[^"]*"' | cut -d'"' -f4)
+TASKS+=($TASK)
+echo "  → Task ID: $TASK"
+
+# Slide 4 - Impact
+echo "[STEP 4] Generating slide 4 (impact)..."
+TASK=$(python3 generate_image.py 4 "Les builders perdent" "Changement de règles" "" --style "$STYLE" 2>&1 | grep -o '"task_id": "[^"]*"' | cut -d'"' -f4)
+TASKS+=($TASK)
+echo "  → Task ID: $TASK"
+
+# Slide 5 - Conclusion
+echo "[STEP 5] Generating slide 5 (conclusion)..."
+TASK=$(python3 generate_image.py 5 "Contrôle vs Écosystème" "Quelle stratégie gagne?" "" --style "$STYLE" 2>&1 | grep -o '"task_id": "[^"]*"' | cut -d'"' -f4)
 TASKS+=($TASK)
 echo "  → Task ID: $TASK"
 

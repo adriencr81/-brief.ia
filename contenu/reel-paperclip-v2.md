@@ -45,7 +45,7 @@
 > C'est du marketing.
 
 > **[10]** — 3 sec
-> **Score : 2,5 / 5**
+> **Score : 3 / 5**
 > Commente **RAPPORT** → je t'envoie le test complet.
 
 ---
