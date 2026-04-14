@@ -78,7 +78,15 @@ def poll_task_status(task_id: str, max_retries: int = MAX_RETRIES) -> dict:
             )
             response.raise_for_status()
 
-            task = response.json()
+            # Handle Kie.ai response format: {"code": 200, "msg": "success", "data": {...}}
+            result = response.json()
+
+            # Extract task data from Kie.ai response
+            if result.get("code") == 200 and result.get("data"):
+                task = result["data"]
+            else:
+                task = result
+
             state = task.get("state")
             result_json = task.get("resultJson", {})
             image_url = result_json.get("image_url")

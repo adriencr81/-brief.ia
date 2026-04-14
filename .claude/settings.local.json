@@ -52,7 +52,11 @@
       "Bash(python3 /tmp/generate_image.py)",
       "Bash(python3)",
       "WebFetch(domain:kie.ai)",
-      "WebFetch(domain:docs.kie.ai)"
+      "WebFetch(domain:docs.kie.ai)",
+      "Bash(xargs grep:*)",
+      "Bash(python3 generate_image.py 1 \"J'ai passé 2h à configurer 4 agents IA.\" \"Ils m'ont sorti une newsletter sur un outil de 2022.\" \"Paperclip test & verdict\")",
+      "Bash(python3 generate_image.py 1 \"Le prompt engineering\" \"est mort.\" --style impact)",
+      "Bash(python3 retrieve_image.py 79b135ffcfc45c002ee8247030166c55 ../images/test_impact_slide.png)"
     ]
   }
 }

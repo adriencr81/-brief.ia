@@ -30,7 +30,7 @@ def load_env():
 load_env()
 
 # Config
-KIE_API_KEY = os.getenv("GEMINI_API_KEY")
+KIE_API_KEY = os.getenv("KIE_API_KEY")  # Use Kie.ai API key, not Gemini
 KIE_BASE_URL = "https://api.kie.ai/api/v1/jobs"
 
 # Brand template
@@ -44,64 +44,97 @@ BRAND_TEMPLATE = {
     "logo": "brief.ia (top-left, subtle)",
 }
 
-def create_slide_prompt(slide_num: int, title: str, body: str, context: str = "") -> str:
+def create_slide_prompt(slide_num: int, title: str, body: str, context: str = "", style: str = "default") -> str:
     """
-    Create a standardized visual prompt for Kie.ai
+    Create a standardized visual prompt for Kie.ai Nano Banana 2
 
     Args:
         slide_num: Slide number (1-5 typically)
         title: Main headline/title
         body: Body text (1-2 lines)
         context: Additional context about the carousel (topic, theme)
+        style: Visual style ('default', 'impact', 'verdict', 'signal')
+               'impact' = large dramatic text with effects
+               'verdict' = emphasized score/conclusion
+               'signal' = contrasting ideas (dead vs alive)
 
     Returns:
-        Prompt string for Nano Banana 2
+        Prompt string for Nano Banana 2 (with reference image support)
     """
 
-    brand_info = f"""
-Brand Identity:
-- Background: {BRAND_TEMPLATE['background']} (pure black)
-- Primary text: {BRAND_TEMPLATE['text_primary']} (white)
-- Accent color: {BRAND_TEMPLATE['accent']} (electric cyan)
-- Font: {BRAND_TEMPLATE['font']}, bold, sans-serif
-- Dimensions: {BRAND_TEMPLATE['dimensions']}
-- Logo: {BRAND_TEMPLATE['logo']}
-- Style: High-contrast, minimalist, tech-forward, readable on mobile
+    # Style-specific instructions
+    style_prompts = {
+        "default": """
+VISUAL STYLE:
+- High-contrast minimalist design
+- Large bold sans-serif text
+- Black background with white/cyan text
+- Clean, professional, tech-forward
+""",
+        "impact": """
+VISUAL STYLE — DRAMATIC & IMPACTFUL:
+- Gritty, high-impact visual design
+- HUGE main title (takes 60-70% of space) in WHITE
+- Visual effects: cracks, breaks, shatters, or glitch effects on key words
+- If showing contradiction: use RED (#FF3333) for "dead/broken/wrong" concepts
+- RED glow or halo around emphasized words
+- Black background for maximum contrast
+- Professional but bold/edgy, not clean corporate
+- Think: tech disruption, breaking news, paradigm shift
+""",
+        "verdict": """
+VISUAL STYLE — SCORE/CONCLUSION:
+- Verdict number or statement DOMINATES (60%+ of space)
+- Simple, bold, dramatic
+- White text on black
+- Optional: subtle background accent color (cyan or purple)
+- Clear visual hierarchy
+""",
+        "signal": """
+VISUAL STYLE — CONTRASTING IDEAS:
+- Show two opposing concepts visually
+- "Dead/Old" idea: darker, breaking apart, fading, or struck-through
+- "New/Alive" idea: bright, glowing, prominent
+- Use RED for "old/dead", CYAN or WHITE for "new/alive"
+- High contrast between the two ideas
 """
+    }
+
+    selected_style = style_prompts.get(style, style_prompts["default"])
 
     content = f"""
-You are a professional designer creating Instagram carousel slide #{slide_num}/5 for a tech/business audience.
+You are a professional designer creating an Instagram carousel slide #{slide_num}/5 for French tech founders.
+Audience: Solopreneurs, freelancers, startup builders interested in AI tools.
 
-{brand_info}
-
-Slide Content:
+SLIDE TEXT CONTENT:
 TITLE: {title}
 BODY: {body}
 
-{f"Context: {context}" if context else ""}
+{f"CONTEXT: {context}" if context else ""}
 
-CRITICAL REQUIREMENTS:
-1. Black background (#000000) — no gradients, pure solid black
-2. Text must be LARGE and HIGH-CONTRAST:
-   - Title: 72pt+ (very bold)
-   - Body: 36pt+ (bold)
-   - White text (#FFFFFF) for readability
-3. Use cyan accents (#00C8FF) for:
-   - Key numbers
-   - Verdict words
-   - CTA text
-4. "brief.ia" logo must appear top-left (15-20pt, subtle, ~10% opacity)
-5. Purple borders (#8B5CF6) optional but elegant if used
-6. NO noise, filters, or visual clutter — clean edges only
-7. Text must be centered or left-aligned (not scattered)
-8. Ensure text is fully readable on 400px mobile screen
+BRAND STANDARDS:
+- Canvas: 1080×1080px square
+- Background: #000000 (pure black, no gradients)
+- Primary font: Inter Bold, Montserrat Black, or similar modern sans-serif
+- Primary colors: #FFFFFF (white), #00C8FF (cyan), #FF3333 (red for impact)
+- Logo: "brief.ia" top-left corner (subtle, ~10% opacity)
+- Style: High-contrast, minimal, mobile-readable
 
-TEXT TO DISPLAY:
-"{title}"
+{selected_style}
 
-"{body}"
+CRITICAL RULES:
+1. Title/main text must be READABLE on mobile (at least 1080/10 = ~100px minimum)
+2. Text must be centered or well-aligned, not scattered
+3. NO photography, no faces, no complex illustrations
+4. NO watermarks, NO social media handles (except brief.ia logo)
+5. If using effects (cracks, glows, breaks): keep text readable under/over them
+6. Generate 1080×1080 PNG
 
-Generate a 1080×1080 PNG image matching these specifications exactly.
+TEXT TO RENDER:
+Main: {title}
+Subtitle: {body}
+
+Create a professional, high-impact Instagram carousel slide that matches the visual style above.
 """
 
     return content.strip()
@@ -113,10 +146,16 @@ def submit_generation_task(
     slide_num: int = 1,
     context: str = "",
     aspect_ratio: str = "1:1",
-    resolution: str = "1K"
+    resolution: str = "1K",
+    style: str = "default",
+    reference_image_url: str = None
 ) -> dict:
     """
     Submit image generation task to Kie.ai
+
+    Args:
+        style: 'default', 'impact' (dramatic), 'verdict' (score), 'signal' (contrast)
+        reference_image_url: Optional URL to reference image for style guidance
 
     Returns:
         {
@@ -127,21 +166,30 @@ def submit_generation_task(
     """
 
     if not KIE_API_KEY:
-        raise ValueError("GEMINI_API_KEY not set in environment")
+        raise ValueError("KIE_API_KEY not set in environment")
 
-    prompt = create_slide_prompt(slide_num, title, body, context)
+    prompt = create_slide_prompt(slide_num, title, body, context, style)
 
     headers = {
         "Authorization": f"Bearer {KIE_API_KEY}",
         "Content-Type": "application/json"
     }
 
-    payload = {
-        "model": "nano-banana-2",
+    # Build input object (Kie.ai requires params in "input" field)
+    input_obj = {
         "prompt": prompt,
         "aspect_ratio": aspect_ratio,
         "resolution": resolution,
-        "output_format": "PNG"
+        "output_format": "png"
+    }
+
+    # Add reference image if provided (for style guidance)
+    if reference_image_url:
+        input_obj["image_input"] = [reference_image_url]
+
+    payload = {
+        "model": "nano-banana-2",
+        "input": input_obj
     }
 
     try:
@@ -154,7 +202,12 @@ def submit_generation_task(
         response.raise_for_status()
 
         result = response.json()
-        task_id = result.get("task_id")
+
+        # Handle Kie.ai response format: {"code": 200, "msg": "success", "data": {"taskId": "...", "recordId": "..."}}
+        if result.get("code") == 200 and result.get("data"):
+            task_id = result["data"].get("taskId") or result["data"].get("recordId")
+        else:
+            task_id = result.get("task_id") or result.get("taskId")
 
         if not task_id:
             raise ValueError(f"No task_id in response: {result}")
@@ -177,26 +230,44 @@ def main():
     """CLI interface"""
 
     if len(sys.argv) < 3:
-        print("Usage: python3 generate_image.py <slide_num> <title> <body> [context]")
+        print("Usage: python3 generate_image.py <slide_num> <title> <body> [context] [--style STYLE] [--ref IMAGE_URL]")
         print()
-        print("Example:")
-        print('  python3 generate_image.py 1 "Voici le hook" "Description courte de 1-2 lignes"')
+        print("Styles: default, impact, verdict, signal")
+        print()
+        print("Examples:")
+        print('  python3 generate_image.py 1 "Voici le hook" "Description courte"')
+        print('  python3 generate_image.py 1 "Le prompt engineering" "est mort." --style impact --ref https://example.com/ref.png')
         sys.exit(1)
 
     slide_num = int(sys.argv[1])
     title = sys.argv[2]
     body = sys.argv[3]
-    context = sys.argv[4] if len(sys.argv) > 4 else ""
+    context = ""
+    style = "default"
+    ref_image = None
 
-    print(f"[GENERATE] Slide {slide_num}...")
+    # Parse optional arguments
+    for i in range(4, len(sys.argv)):
+        if sys.argv[i] == "--style" and i + 1 < len(sys.argv):
+            style = sys.argv[i + 1]
+        elif sys.argv[i] == "--ref" and i + 1 < len(sys.argv):
+            ref_image = sys.argv[i + 1]
+        elif not sys.argv[i].startswith("--"):
+            context = sys.argv[i]
+
+    print(f"[GENERATE] Slide {slide_num} ({style})...")
     print(f"   Title: {title}")
     print(f"   Body: {body[:50]}...")
+    if ref_image:
+        print(f"   Ref: {ref_image[:60]}...")
 
     result = submit_generation_task(
         title=title,
         body=body,
         slide_num=slide_num,
-        context=context
+        context=context,
+        style=style,
+        reference_image_url=ref_image
     )
 
     # Output JSON for easy parsing by other tools
