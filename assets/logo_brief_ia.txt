@@ -1,0 +1,9 @@
+NOTE: Logo brief.ia should be placed at:
+- Top-left corner
+- 15-20px height / 80-120px width
+- White text "brief" + cyan ".ia"
+- Or use the circular logo with white/cyan design
+- ~10% opacity if overlaying content
+
+For Kie.ai: Include as reference image via image_input parameter
+or describe the visual precisely in the prompt

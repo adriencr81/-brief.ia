@@ -41,7 +41,7 @@ BRAND_TEMPLATE = {
     "accent_alt": "#8B5CF6",  # Purple
     "font": "Inter Bold / Montserrat Black",
     "dimensions": "1080x1080px",
-    "logo": "brief.ia (top-left, subtle)",
+    "logo": "brief.ia - circular badge with white/cyan design, top-left corner, 100px diameter, subtle",
 }
 
 def create_slide_prompt(slide_num: int, title: str, body: str, context: str = "", style: str = "default") -> str:
@@ -117,18 +117,26 @@ BRAND STANDARDS:
 - Background: #000000 (pure black, no gradients)
 - Primary font: Inter Bold, Montserrat Black, or similar modern sans-serif
 - Primary colors: #FFFFFF (white), #00C8FF (cyan), #FF3333 (red for impact)
-- Logo: "brief.ia" top-left corner (subtle, ~10% opacity)
 - Style: High-contrast, minimal, mobile-readable
+
+LOGO PLACEMENT (MUST INCLUDE):
+- Position: TOP-LEFT CORNER (20-30px from edges)
+- Design: Circular badge, dark gray/charcoal background
+- Content: Text "brief" in WHITE, ".ia" in CYAN (#00C8FF)
+- Size: 100-120px diameter (clearly visible)
+- Opacity: Fully visible (NOT faded or transparent)
+- Important: Logo must appear on every slide at this exact position
 
 {selected_style}
 
 CRITICAL RULES:
-1. Title/main text must be READABLE on mobile (at least 1080/10 = ~100px minimum)
-2. Text must be centered or well-aligned, not scattered
-3. NO photography, no faces, no complex illustrations
-4. NO watermarks, NO social media handles (except brief.ia logo)
-5. If using effects (cracks, glows, breaks): keep text readable under/over them
-6. Generate 1080×1080 PNG
+1. **LOGO MUST BE PRESENT** — Include brief.ia circular badge in top-left corner (100-120px, clearly visible)
+2. Title/main text must be READABLE on mobile (at least 1080/10 = ~100px minimum)
+3. Text must be centered or well-aligned, not scattered
+4. NO photography, no faces, no complex illustrations
+5. NO watermarks except brief.ia logo (which MUST appear)
+6. If using effects (cracks, glows, breaks): keep text readable under/over them
+7. Generate 1080×1080 PNG
 
 TEXT TO RENDER:
 Main: {title}
