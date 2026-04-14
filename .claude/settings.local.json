@@ -61,7 +61,8 @@
       "Bash(python3 retrieve_image.py 79b135ffcfc45c002ee8247030166c55 ../images/test_impact_final.png)",
       "Bash(python3 generate_image.py 1 \"Le prompt engineering\" \"est mort.\" \"Paperclip test\" --style impact)",
       "Bash(python3 retrieve_image.py a7693de82271f855c02816ad571d5487 ../images/test_logo_slide.png)",
-      "Bash(ls -la /c/Users/gamer/news-ia/RECAP*)"
+      "Bash(ls -la /c/Users/gamer/news-ia/RECAP*)",
+      "Bash([ ! -f /c/Users/gamer/news-ia/images/test_logo_slide.png ])"
     ]
   }
 }
