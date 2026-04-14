@@ -32,7 +32,7 @@ def load_env():
 load_env()
 
 # Config
-KIE_API_KEY = os.getenv("GEMINI_API_KEY")
+KIE_API_KEY = os.getenv("KIE_API_KEY")
 KIE_BASE_URL = "https://api.kie.ai/api/v1/jobs"
 
 # Polling config
@@ -57,7 +57,7 @@ def poll_task_status(task_id: str, max_retries: int = MAX_RETRIES) -> dict:
     """
 
     if not KIE_API_KEY:
-        raise ValueError("GEMINI_API_KEY not set in environment")
+        raise ValueError("KIE_API_KEY not set in environment")
 
     headers = {
         "Authorization": f"Bearer {KIE_API_KEY}",
@@ -78,34 +78,28 @@ def poll_task_status(task_id: str, max_retries: int = MAX_RETRIES) -> dict:
             )
             response.raise_for_status()
 
-            # Handle Kie.ai response format: {"code": 200, "msg": "success", "data": {...}}
             result = response.json()
 
-            # Extract task data from Kie.ai response
-            if result.get("code") == 200 and result.get("data"):
-                task = result["data"]
-            else:
-                task = result
-
+            # Extract task from Kie.ai response
+            task = result.get("data", result)
             state = task.get("state")
             fail_msg = task.get("failMsg", "")
 
-            # Parse resultJson (it's a string, not an object)
+            elapsed = time.time() - start_time
+
+            # Parse resultJson (it's a string in Kie.ai response)
             result_json_str = task.get("resultJson", "{}")
             try:
-                if isinstance(result_json_str, str):
-                    result_json = json.loads(result_json_str)
-                else:
-                    result_json = result_json_str
+                result_json = json.loads(result_json_str) if isinstance(result_json_str, str) else result_json_str
             except json.JSONDecodeError:
                 result_json = {}
 
-            # Image URL can be in different formats
-            image_url = result_json.get("image_url") or (
-                result_json.get("resultUrls")[0] if result_json.get("resultUrls") else None
-            )
-
-            elapsed = time.time() - start_time
+            # Extract image URL (can be in resultUrls or image_url)
+            image_url = None
+            if result_json.get("resultUrls"):
+                image_url = result_json["resultUrls"][0]
+            elif result_json.get("image_url"):
+                image_url = result_json["image_url"]
 
             if state == "success":
                 print(f"[SUCCESS] Task {task_id} succeeded in {elapsed:.1f}s")
@@ -113,7 +107,7 @@ def poll_task_status(task_id: str, max_retries: int = MAX_RETRIES) -> dict:
                     "task_id": task_id,
                     "state": "success",
                     "image_url": image_url,
-                    "cost": result_json.get("cost", 0.04),
+                    "cost": 0.04,
                     "retries": retry,
                     "elapsed_seconds": elapsed
                 }
