@@ -88,9 +88,22 @@ def poll_task_status(task_id: str, max_retries: int = MAX_RETRIES) -> dict:
                 task = result
 
             state = task.get("state")
-            result_json = task.get("resultJson", {})
-            image_url = result_json.get("image_url")
             fail_msg = task.get("failMsg", "")
+
+            # Parse resultJson (it's a string, not an object)
+            result_json_str = task.get("resultJson", "{}")
+            try:
+                if isinstance(result_json_str, str):
+                    result_json = json.loads(result_json_str)
+                else:
+                    result_json = result_json_str
+            except json.JSONDecodeError:
+                result_json = {}
+
+            # Image URL can be in different formats
+            image_url = result_json.get("image_url") or (
+                result_json.get("resultUrls")[0] if result_json.get("resultUrls") else None
+            )
 
             elapsed = time.time() - start_time
 
