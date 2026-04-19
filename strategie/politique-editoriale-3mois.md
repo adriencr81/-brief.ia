@@ -15,9 +15,49 @@ Pas d'actif unique. Chaque sujet — test d'outil ou news — génère au minimu
 
 ---
 
-## Les deux flux de contenu
+## Les trois flux de contenu
 
-### Flux 1 — NEWS IA / SIGNAL vs BRUIT (50% du contenu)
+### Flux 1 — CAS RÉELS "Gagner avec l'IA" (30% du contenu)
+Source : témoignages vérifiés (Indie Hackers, Twitter/X, Reddit r/SideProject, interviews)
+
+Règle de publication :
+- 1 cas réel par semaine minimum
+- Toujours un résultat chiffré (€/mois, heures économisées, % de croissance)
+- Si pas de chiffre vérifié → pas de post
+
+**Hook formula (adapter à chaque cas) :**
+```
+"[Prénom] gagne [montant]€/mois. Il travaille [X]h par semaine.
+Voici exactement les outils IA qu'il utilise."
+```
+
+**Structure carrousel CAS RÉEL (7 slides) :**
+1. Hook — chiffre + temps de travail réduit
+2. Contexte — qui c'est, d'où il part
+3. L'outil ou la méthode clé
+4. Ce qui a changé concrètement
+5. Le chiffre avant / après
+6. Comment reproduire (3 étapes max)
+7. CTA — "Commente CAS pour recevoir la méthode complète"
+
+**Structure reel CAS RÉEL (20–30s) :**
+```
+[0–3s]  Hook : "[Prénom] fait [montant]€/mois avec [outil]"
+[3–8s]  Contexte : "Il était [situation avant]"
+[8–18s] La méthode en 3 bullets
+[18–25s] Le résultat chiffré
+[25–30s] CTA : "Commente CAS"
+```
+
+**Où trouver les cas :**
+- [indiehackers.com](https://indiehackers.com) → filtrer par "AI" + revenu mensuel
+- Twitter/X : chercher `"with AI" "$" per month` ou `"grâce à l'IA" "€/mois"`
+- Reddit : r/SideProject, r/EntrepreneurRideAlong
+- Témoignages de ta propre audience (stories sondage)
+
+---
+
+### Flux 2 — NEWS IA / SIGNAL vs BRUIT (40% du contenu)
 Source : newsletters hebdomadaires (PDF dans `newsletter/`)
 
 Règle de publication :
@@ -53,7 +93,7 @@ Règle de publication :
 
 ---
 
-### Flux 2 — TEST & VERDICT (50% du contenu)
+### Flux 3 — TEST & VERDICT (30% du contenu)
 Source : 1 outil testé par semaine (Paperclip, Cursor, Make, n8n, etc.)
 
 Règle de publication :
@@ -96,7 +136,7 @@ Règle de publication :
 
 ---
 
-### Flux 3 — COULISSES (optionnel)
+### Flux 4 — COULISSES (optionnel)
 Source : ta propre expérience de builder avec l'IA
 
 Format : Stories uniquement (gratuit, 0 production time)
