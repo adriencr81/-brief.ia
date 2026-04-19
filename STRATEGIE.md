@@ -1,10 +1,10 @@
 # Stratégie — @brief.ia
 
 ## Positionnement
-"Le compte Instagram français qui te montre concrètement comment les outils IA transforment les business — démos réelles, résultats chiffrés."
+"Les blueprints des solopreneurs qui gagnent avec l'IA — décryptés, testés, traduits pour le marché français."
 
-Angle clé : **filtre éditorial**, pas couverture exhaustive.
-Chaque post répond à : **"Comment cet outil peut me faire gagner du temps ou de l'argent ?"**
+Angle clé : **pas une review d'outils — une déconstruction de méthodes**.
+Chaque post répond à : **"Quelqu'un gagne de l'argent avec l'IA — est-ce que tu peux reproduire ça ?"**
 
 ---
 
@@ -31,53 +31,60 @@ Chaque post répond à : **"Comment cet outil peut me faire gagner du temps ou d
 
 ## Piliers éditoriaux
 
-| Pilier | % | Format |
-|---|---|---|
-| Test & Verdict | 50% | 1 outil testé, résultat montré, verdict en 3 mots |
-| Stack du moment | 20% | Combinaisons d'outils pour un use case précis |
-| Signal vs Bruit | 20% | Démystification d'outils qui buzzent sans valeur réelle |
-| Coulisses / Méta | 10% | Setup perso, process éditorial, comment je choisis |
+| Pilier | % | Format | Source |
+|---|---|---|---|
+| Blueprint | 50% | Cas réel → tu testes la méthode → verdict reproductible | Indie Hackers, Twitter, ton audience |
+| Newsletter IA | 35% | Meilleure info des newsletters FR/EN → traduite en post actionnable | Newsletters PDF hebdo |
+| Coulisses | 15% | Ton process, tes erreurs, ce que tu testes | Ton quotidien |
+
+**Règle du Blueprint :**
+> Hook = un solopreneur qui gagne avec l'IA
+> Corps = tu déconstruis SA méthode + tu testes l'outil clé
+> Verdict = est-ce reproductible pour ton audience FR ? Oui si / Non si
 
 ---
 
-## Formats & cadence (7 posts/semaine)
+## Formats & cadence (4–5 posts/semaine)
 
-| Format | Fréquence | Temps de prod | Objectif |
+| Format | Fréquence | Temps de prod | Source |
 |---|---|---|---|
-| Carrousel 5–7 slides | 2x/semaine | 60–90 min | Sauvegarde + reach |
-| Reel 30–45s | 2x/semaine | 45–60 min | Reach + nouveaux abonnés |
-| Post image simple | 1x/semaine | 15 min | Régularité |
-| Stories | Quotidien | 5 min | Engagement + algo |
+| Carrousel Blueprint (7 slides) | 1x/semaine | 90 min | Cas réel + test outil |
+| Reel Blueprint (20–30s) | 1x/semaine | 45 min | Même cas, format court |
+| Carrousel Newsletter (5 slides) | 1–2x/semaine | 30 min (skill auto) | Newsletters hebdo |
+| Reel Newsletter (15–20s) | 1x/semaine | 30 min | Meilleure info de la semaine |
+| Stories | Quotidien | 5 min | Teasing + engagement |
 
 **Budget temps total : 5–6h/semaine**
 
-**Règle slide 1 :** accroche problème ou contre-intuitif — jamais "voici X outils"
-**Règle Reel :** montrer le résultat dans les 3 premières secondes
-**Règle batch :** 1 outil testé = carrousel + reel + post simple + stories. Ne jamais publier sans verdict tranché.
+**Règle Blueprint :** hook = chiffre réel d'un solopreneur, jamais une promesse vague
+**Règle Newsletter :** utiliser le skill `newsletter-to-instagram` — 30 min max par post
+**Règle universelle :** pas de post sans verdict tranché ("reproductible / pas reproductible")
 
 ---
 
 ## Workflow éditorial
 
 ```
-Lundi soir     → veille 30 min (newsletters + ProductHunt)
-               → choix du sujet de la semaine
+Lundi matin    → Lire les newsletters (30 min)
+               → Choisir 1 Blueprint de la semaine (cas réel à décrypter)
+               → Lancer skill newsletter-to-instagram sur les PDFs
 
-Mercredi soir  → test de l'outil (45 min) + notes
-               → production carrousel #1 (60 min)
+Mardi soir     → Carrousel Newsletter #1 (30 min — skill fait le gros)
+               → Reel Newsletter (30 min)
 
-Jeudi soir     → Reel #1 (45 min)
-               → stories préparées pour la semaine (20 min)
+Mercredi soir  → Tester l'outil du Blueprint (45 min) + notes
 
-Samedi matin   → carrousel #2 + Reel #2 en batch (2h)
-               → programmation de toute la semaine
+Jeudi soir     → Carrousel Blueprint (90 min)
+
+Vendredi soir  → Reel Blueprint (45 min)
+               → Stories de la semaine préparées (20 min)
 ```
 
-**Critères de sélection d'un outil :**
-1. Buzz anglophone depuis < 2–3 semaines
-2. Use case applicable à fondateur/freelance FR
-3. Testable en < 1h
-4. Avis tranché possible (positif OU négatif)
+**Critères de sélection d'un Blueprint :**
+1. Cas réel vérifiable (Indie Hackers, Twitter, ton audience)
+2. Résultat chiffré public
+3. Méthode reproductible par un freelance/fondateur FR
+4. L'outil clé est testable en < 1h
 
 **Sources de veille :**
 - The Rundown, Ben's Bites, TLDR AI, Superhuman, Every (newsletters)

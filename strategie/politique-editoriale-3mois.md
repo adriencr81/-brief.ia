@@ -1,17 +1,18 @@
 # Politique éditoriale brief.ia — Avril → Juin 2026
 
-> **Positionnement** : "Je teste les outils IA que tu n'as pas le temps de tester."
+> **Positionnement** : "Les blueprints des solopreneurs qui gagnent avec l'IA — décryptés, testés, traduits pour le marché FR."
 > **Audience** : Fondateurs, freelances, créateurs francophones qui buildent avec l'IA
 > **Objectif M3** : 200 abonnés newsletter Beehiiv
 > **Temps de production** : 5–6h/semaine maximum
+> **Cadence** : 4–5 posts/semaine (pas 7)
 
 ---
 
-## La règle absolue
+## Les deux règles absolues
 
-**1 sujet = minimum 2 actifs publiés.**
+**1. 1 Blueprint = carrousel + reel.** Pas de carrousel sans reel du même sujet.
 
-Pas d'actif unique. Chaque sujet — test d'outil ou news — génère au minimum un carrousel ET un reel. C'est la condition pour que l'algorithme travaille pour toi.
+**2. Pas de post sans verdict.** Toujours finir par "reproductible / pas reproductible — voici pourquoi."
 
 ---
 
@@ -57,8 +58,8 @@ Voici exactement les outils IA qu'il utilise."
 
 ---
 
-### Flux 2 — NEWS IA / SIGNAL vs BRUIT (40% du contenu)
-Source : newsletters hebdomadaires (PDF dans `newsletter/`)
+### Flux 2 — NEWSLETTERS IA (35% du contenu)
+Source : newsletters hebdomadaires (PDF dans `newsletter/`) — traitement via skill `newsletter-to-instagram`
 
 Règle de publication :
 - Tu ne publies que si le score ≥ 7/10
@@ -93,7 +94,17 @@ Règle de publication :
 
 ---
 
-### Flux 3 — TEST & VERDICT (30% du contenu)
+### Flux 3 — COULISSES (15% du contenu)
+Source : ton quotidien de builder IA
+
+Format : Stories uniquement (5 min/jour, zéro production)
+- "Je suis en train de tester [méthode]"
+- "Résultat intermédiaire : [chiffre ou observation]"
+- Sondage : "Tu utilises déjà ça ?"
+
+---
+
+### Flux supprimé — TEST & VERDICT autonome
 Source : 1 outil testé par semaine (Paperclip, Cursor, Make, n8n, etc.)
 
 Règle de publication :
@@ -148,50 +159,46 @@ Règle : 1 story/jour minimum. 2 min max à produire.
 
 ---
 
-## Rythme de publication hebdomadaire (7 posts)
+## Rythme de publication hebdomadaire (4–5 posts)
 
 | Jour | Heure | Contenu | Format | Flux |
 |------|-------|---------|--------|------|
-| **Lundi** | matin | Lecture newsletters + sélection news (30 min) | (production) | NEWS |
-| **Mardi** | 7h–9h | Carrousel NEWS #1 (scoring élevé) | Post | NEWS |
-| **Mercredi** | 7h–9h | Carrousel NEWS #2 (second sujet) | Post | NEWS |
-| **Mercredi** | 18h | Reel NEWS #1 | Reel | NEWS |
-| **Jeudi** | 7h–9h | Carrousel TEST & VERDICT (outil semaine) | Post | TEST |
-| **Vendredi** | 18h | Reel TEST ou Reel NEWS #2 | Reel | TEST/NEWS |
-| **Samedi** | 10h | Post image simple (coulisses ou news) | Post | COULISSES |
-| **Quotidien** | var | Stories (teasing, breaking, sondages) | Stories | COULISSES |
+| **Lundi** | matin | Lecture newsletters + choix Blueprint semaine | (production) | — |
+| **Mardi** | 7h–9h | Carrousel Newsletter (skill auto) | Post | NEWSLETTER |
+| **Mercredi** | 18h | Reel Newsletter | Reel | NEWSLETTER |
+| **Jeudi** | 7h–9h | Carrousel Blueprint (cas réel + test outil) | Post | BLUEPRINT |
+| **Vendredi** | 18h | Reel Blueprint | Reel | BLUEPRINT |
+| **Quotidien** | var | Stories (teasing, résultats intermédiaires) | Stories | COULISSES |
 
-**Volume : 7 posts/semaine + stories quotidiennes = priorité MAXIMAL sur l'algorithme**
+**Volume : 4 posts/semaine + stories = soutenable sur 12 mois sans burnout**
 
 ---
 
-## Planning de production hebdomadaire (6–7h)
+## Planning de production hebdomadaire (5–6h)
 
 | Tâche | Durée | Quand |
 |-------|-------|-------|
-| Lecture newsletters + scoring news | 30 min | **Lundi matin** |
-| Création carrousel NEWS #1 (Canva) | 45 min | **Lundi soir** |
-| Création carrousel NEWS #2 (Canva) | 45 min | **Mardi soir** |
-| Test réel d'un outil | 45 min | **Mardi–jeudi** |
-| Création carrousel TEST (Canva) | 60 min | **Jeudi matin** |
-| Reel NEWS (CapCut) | 45 min | **Mercredi soir** |
-| Reel TEST (CapCut) | 45 min | **Vendredi matin** |
-| Post image simple (Canva) | 30 min | **Samedi matin** |
-| Stories | 10 min/jour | **Quotidien** |
-| DM lead magnet (si nouveau CTA) | 15 min | **À la demande** |
+| Lecture newsletters + choix Blueprint | 30 min | **Lundi matin** |
+| Skill newsletter-to-instagram (carrousel) | 30 min | **Lundi soir** |
+| Reel Newsletter (CapCut) | 30 min | **Mardi soir** |
+| Recherche + test outil Blueprint | 60 min | **Mercredi soir** |
+| Carrousel Blueprint (Canva) | 90 min | **Jeudi soir** |
+| Reel Blueprint (CapCut) | 45 min | **Vendredi matin** |
+| Stories | 5 min/jour | **Quotidien** |
 
-**Total : ~6–7h/semaine (vs 5–6h théorique) — compensé par forte visibilité algorithme**
+**Total : ~5h/semaine — soutenable sur 12 mois**
 
 ---
 
 ## Règles de contenu non-négociables
 
-1. **Avis tranché ou silence** — si t'as pas de verdict clair après test, tu ne publies pas
-2. **Hook = slide 1 = première ligne caption** — les 2 premiers mots doivent bloquer le scroll
-3. **1 CTA par post, 1 mot** — GUIDE, SIGNAL, LISTE, OUTIL, RAPPORT, STACK
-4. **ManyChat configuré avant publication** — pas de post sans DM automatique prêt
-5. **Newsletter en fin de funnel** — chaque DM auto pointe vers l'abonnement Beehiiv
-6. **Canva specs identiques sur chaque slide** — #000000 / #FFFFFF / #00C8FF / bordure #8B5CF6
+1. **Hook = chiffre réel d'un solopreneur** — jamais une promesse vague
+2. **Verdict clair obligatoire** — "reproductible si… / pas reproductible si…"
+3. **Hook = slide 1 = première ligne caption** — les 2 premiers mots doivent bloquer le scroll
+4. **1 CTA par post, 1 mot** — BLUEPRINT, MÉTHODE, STACK, GUIDE
+5. **ManyChat configuré avant publication** — pas de post sans DM automatique prêt
+6. **Newsletter en fin de funnel** — chaque DM auto pointe vers l'abonnement Beehiiv
+7. **Canva specs identiques sur chaque slide** — #000000 / #FFFFFF / #00C8FF / bordure #8B5CF6
 
 ---
 
