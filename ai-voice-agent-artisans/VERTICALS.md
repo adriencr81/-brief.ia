@@ -69,18 +69,30 @@ Le script serrurier est réutilisable à 80 % sur vitriers et plombiers urgentis
 
 Le vrai marché adressable n'est pas 6–8k serruriers. C'est **40–60k TPE urgentistes** en France — même problème, même profil, même allergie aux centrales.
 
-### Marché total recalculé
+### Marché total
 
-| Segment               | TPE FR estimées | ARR potentiel |
-|-----------------------|-----------------|---------------|
-| Serruriers            | 7 000           | 8–14 M€       |
-| Vitriers              | 5 000           | 6–10 M€       |
-| Plombiers urgentistes | 15 000          | 18–27 M€      |
-| Chauffagistes         | 10 000          | 12–18 M€      |
-| Électriciens dépann.  | 8 000           | 10–14 M€      |
-| Déboucheurs           | 4 000           | 5–7 M€        |
-| Dératiseurs           | 3 000           | 4–6 M€        |
-| **Total**             | **~52 000**     | **~63–96 M€** |
+| Segment               | TPE FR estimées |
+|-----------------------|-----------------|
+| Serruriers            | 7 000           |
+| Vitriers              | 5 000           |
+| Plombiers urgentistes | 15 000          |
+| Chauffagistes         | 10 000          |
+| Électriciens dépann.  | 8 000           |
+| Déboucheurs           | 4 000           |
+| Dératiseurs           | 3 000           |
+| **Total**             | **~52 000**     |
+
+**Pricing : à définir** — le prix final impacte directement le TAM et la valorisation. Une fourchette haute est envisagée.
+
+### ARR réaliste selon pénétration (pricing à confirmer)
+
+| Pénétration | Clients | Exemple MRR (120 €) | ARR |
+|---|---|---|---|
+| 5 % | 2 600 | 312 000 € | ~3,7 M€ |
+| 10 % | 5 200 | 624 000 € | ~7,5 M€ |
+| 15 % | 7 800 | 936 000 € | ~11 M€ |
+
+**Objectif villa** : 700 clients × prix/mois → 1M€ ARR → valorisation 10x = 10M€ → vente 50% = **5M€ cash**. Soit 1,3 % de pénétration sur 52k TPE.
 
 ### Séquence d'attaque
 
